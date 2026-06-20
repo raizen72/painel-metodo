@@ -4,148 +4,260 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>🎯 Painel do Método — Vendas</title>
+<title>Curso do Método — Vender IA pro Comércio Local</title>
 <style>
-  :root{ --bg:#0e1116; --pa:#171c24; --pa2:#1e2530; --ink:#e9eef5; --dim:#9aa7b4; --line:#2a3340;
-         --ok:#2ecc71; --okbg:#16271d; --hip:#f0a020; --hipbg:#2a2310; --acc:#4ea1ff; }
+  :root{--bg:#0d1014;--pa:#161b22;--pa2:#1c232c;--ink:#e9eef5;--dim:#9aa7b4;--line:#283039;
+        --acc:#4ea1ff;--ok:#2ecc71;--hip:#f0a020;--bad:#e25563;--apl:#1f6feb;}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;padding-bottom:50px}
-  .wrap{max-width:780px;margin:0 auto;padding:0 14px}
-  header{padding:18px 0 8px}
-  h1{font-size:1.35rem} .sub{color:var(--dim);font-size:.85rem;margin-top:4px}
-  /* toggle sticky */
-  .tabs{position:sticky;top:0;background:var(--bg);padding:12px 0;display:flex;gap:8px;z-index:10;border-bottom:1px solid var(--line)}
-  .tabs button{flex:1;font:inherit;font-weight:700;padding:11px;border-radius:12px;border:1px solid var(--line);background:var(--pa);color:var(--ink);cursor:pointer}
-  .tabs button.on{background:var(--acc);color:#06223f;border-color:var(--acc)}
-  .legend{display:flex;gap:14px;font-size:.78rem;color:var(--dim);margin:12px 0}
-  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
-  .dot.ok{background:var(--ok)} .dot.hip{background:var(--hip)}
-  .fase{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin:20px 0 8px;font-weight:700}
-  .pt{background:var(--pa);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:9px}
-  .pt.ok{border-left-color:var(--ok)} .pt.hip{border-left-color:var(--hip)}
-  .pt .t{font-weight:600;font-size:.98rem}
-  .pt .src{color:var(--dim);font-size:.78rem;margin-top:5px}
-  .badge{font-size:.66rem;font-weight:700;padding:2px 8px;border-radius:20px;float:right;margin-left:8px}
-  .badge.ok{background:var(--okbg);color:var(--ok)} .badge.hip{background:var(--hipbg);color:var(--hip)}
-  /* campo */
-  .step{background:var(--pa);border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:12px}
-  .step h3{font-size:1rem;display:flex;align-items:center;gap:8px}
-  .step .n{background:var(--acc);color:#06223f;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex:none}
-  .step p{color:var(--dim);font-size:.86rem;margin:8px 0 0}
-  .say{background:var(--pa2);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:8px;padding:10px 12px;margin-top:9px;font-size:.9rem;color:var(--ink)}
-  .say b{color:var(--acc)}
-  ul.q{margin:8px 0 0;padding-left:18px} ul.q li{font-size:.9rem;margin:6px 0}
-  .obj{margin-top:8px;font-size:.88rem} .obj b{color:var(--hip)}
-  .hide{display:none}
-  footer{color:var(--dim);font-size:.76rem;text-align:center;margin-top:24px;line-height:1.6}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;line-height:1.55}
+  .top{position:sticky;top:0;z-index:20;background:#0d1014ee;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 12px}
+  .top h1{font-size:1rem;font-weight:700} .top .s{color:var(--dim);font-size:.72rem}
+  nav{display:flex;gap:6px;overflow-x:auto;padding:10px 12px 0;-webkit-overflow-scrolling:touch}
+  nav a{white-space:nowrap;font-size:.8rem;text-decoration:none;color:var(--ink);background:var(--pa);border:1px solid var(--line);border-radius:20px;padding:6px 12px}
+  nav a:hover{border-color:var(--acc)}
+  .wrap{max-width:820px;margin:0 auto;padding:16px 14px 80px}
+  section{padding:22px 0;border-top:1px solid var(--line)}
+  section:first-child{border-top:none}
+  .mod{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--acc);font-weight:700}
+  h2{font-size:1.45rem;margin:4px 0 2px} h3{font-size:1.08rem;margin:20px 0 8px;color:#fff}
+  h4{font-size:.95rem;margin:14px 0 6px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+  p{margin:8px 0;color:#d3dae3} ul{margin:8px 0 8px 4px;padding-left:18px} li{margin:5px 0;color:#d3dae3}
+  .lead{color:var(--dim);font-size:.95rem;font-style:italic;margin:6px 0 10px}
+  .box{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0;background:var(--pa)}
+  .box.aplicar{border-left:4px solid var(--ok);background:#10231a}
+  .box.hype{border-left:4px solid var(--hip);background:#241d0f}
+  .box.script{border-left:4px solid var(--acc);background:var(--pa2)}
+  .box .lbl{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+  .box.aplicar .lbl{color:var(--ok)} .box.hype .lbl{color:var(--hip)} .box.script .lbl{color:var(--acc)}
+  .say{display:block;margin:6px 0;padding-left:10px;border-left:2px solid var(--acc);color:#fff}
+  .step{counter-increment:s;position:relative;padding-left:34px;margin:12px 0}
+  .step::before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;background:var(--apl);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700}
+  ol.steps{list-style:none;counter-reset:s;padding:0}
+  .tag{font-size:.66rem;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:6px}
+  .t-apl{background:#0c2a16;color:var(--ok)} .t-hip{background:#2a2207;color:var(--hip)}
+  .pill{display:inline-block;font-size:.7rem;color:var(--dim);border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin:2px 4px 2px 0}
+  .src{color:var(--dim);font-size:.78rem;margin-top:6px}
+  details{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:var(--pa)}
+  summary{cursor:pointer;font-weight:600;font-size:.9rem}
+  footer{color:var(--dim);font-size:.78rem;text-align:center;margin-top:30px;line-height:1.7}
+  .conf{font-size:.8rem;color:var(--dim)} .conf b{color:var(--ok)}
 </style>
 </head>
 <body>
+<div class="top"><h1>🎓 Curso do Método — Vender IA pro Comércio Local</h1><div class="s">O que os melhores mentores fazem + como aplicar no seu caso · v1 (vivo)</div></div>
+<nav>
+  <a href="#intro">Início</a>
+  <a href="#liam">1 · Liam</a>
+  <a href="#nick">2 · Nick</a>
+  <a href="#ben">3 · Ben</a>
+  <a href="#brasil">4 · Brasil</a>
+  <a href="#vendas">5 · Caixa de Venda</a>
+  <a href="#metodo">6 · O Método</a>
+  <a href="#campo">🎯 Modo Campo</a>
+</nav>
 <div class="wrap">
-  <header>
-    <h1>🎯 Painel do Método — Vendas</h1>
-    <div class="sub">Como vender e implantar IA no comércio local. Vivo (v1) — a rua atualiza.</div>
-  </header>
 
-  <div class="tabs">
-    <button id="bVisao" class="on" onclick="show('visao')">🧠 Visão</button>
-    <button id="bCampo" onclick="show('campo')">🎯 Modo Campo</button>
-  </div>
+<section id="intro">
+  <div class="mod">Introdução</div>
+  <h2>O que é este curso</h2>
+  <p class="lead">Destilei o que os melhores do mundo ensinam sobre vender e implantar IA em negócios locais — e traduzi pro seu caso (mercado/loja física de bairro, produto, bootstrap, Brasil).</p>
+  <p>Cada módulo é o <b>curso de um mentor</b>: quem é, o método dele <b>detalhado</b>, os scripts, e — o mais importante — <b>como aplicar no seu negócio</b> e <b>o que é hype</b> (pra você não copiar besteira). No fim: a <b>Caixa de Ferramentas de Venda</b>, a <b>Síntese</b> e o <b>Modo Campo</b> (o que abrir na frente do dono).</p>
+  <div class="box"><div class="lbl" style="color:var(--acc)">Como ler</div>
+  <p><span class="tag t-apl">aplicar</span> = vários mentores concordam, pode usar · <span class="tag t-hip">testar</span> = hipótese, valida na rua. <b>A rua é o juiz</b> — o que você sentir aplicando reescreve este curso (v2).</p></div>
+</section>
 
-  <!-- ===================== VISÃO ===================== -->
-  <section id="visao">
-    <div class="legend"><span><span class="dot ok"></span>🟢 triangulado — aplicar</span><span><span class="dot hip"></span>🟡 hipótese — testar na rua</span></div>
+<section id="liam">
+  <div class="mod">Módulo 1 · Mentor</div>
+  <h2>Liam Ottley — o modelo completo de vender IA pro negócio</h2>
+  <p class="lead">Criou o modelo "AI Automation Agency" (que todo mundo copia). Morningside AI; comunidade gratuita de 300k+. É o método de GTM mais completo.</p>
 
-    <div class="fase">A · Estratégia</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Nicho estreito → virar o "sistema operacional do nicho"</div><div class="src">comece por 1 dor cara e domine · Ben + Liam + Nick</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Não competir com os grandes — ser a camada de inteligência no hiperlocal</div><div class="src">Ben + pesquisa de mercado</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Produto entregue como serviço-produtizado; custom só no âncora → reusar</div><div class="src">Ben + Felipe + Nick</div></div>
+  <h3>O modelo em 3 fases (a escada)</h3>
+  <ul>
+    <li><b>1. AAA (AI Automation Agency)</b> — porta de entrada no-code. Automações/chatbots simples (Make.com, Voiceflow). Projetos de <b>US$3–5k</b>. Comece ajudando <b>mãe/tia/amigos</b> → depois de <b>4–5 projetos num nicho</b> você já é o "expert daquele setor".</li>
+    <li><b>2. AI Agency</b> — contrata um dev full-stack e sobe pra projetos de <b>US$30–100k</b> (plataformas, SaaS sob medida).</li>
+    <li><b>3. AITP (AI Transformation Partner)</b> — <b>US$100k+</b>. Começa por um <b>audit de US$30–60k</b> (4 semanas mapeando processos) e só então prescreve.</li>
+  </ul>
 
-    <div class="fase">B · Oferta & Caixa</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Vender RESULTADO, não "IA" (menos perda / mais agendamento)</div><div class="src">"sistemas que dão dinheiro, não IA chique" · Nick + todos</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">De-riscar a porta: diagnóstico grátis + garantia + "já montei pro seu negócio"</div><div class="src">Liam + Nick + No-Code Startup</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Caixa: setup pago na frente + recorrência grudenta (bate o churn de ~4 meses)</div><div class="src">Felipe Barcelos</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Preço pela DOR / ticket do nicho</div><div class="src">entre seu mínimo e o máximo do cliente · No-Code Startup</div></div>
-    <div class="pt hip"><span class="badge hip">testar</span><div class="t">Oferta numa frase + "motivo do porquê"</div><div class="src">Hormozi — testar a formulação na rua</div></div>
+  <h3>A sacada nº1: a curva de adoção</h3>
+  <p>Quem chega vendendo "me constrói uma IA" só pega os <b>early adopters</b> — fatia minúscula. <b>A maioria do mercado não está pronta.</b> Por isso o <b>audit/diagnóstico primeiro</b> (educar antes de vender) abre a maioria: você não vende build, vende um caminho.</p>
 
-    <div class="fase">C · Aquisição</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">UM canal só, feito bem (não espalhar)</div><div class="src">Liam + Nick</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">4 canais pra loja de bairro: presencial · warm · indicação · conteúdo local — via WhatsApp</div><div class="src">pruning dos 23 do Liam + No-Code "WhatsApp-first"</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Comunidades: entrar dando valor, nunca chegar vendendo</div><div class="src">Liam + Nick + No-Code</div></div>
+  <h3>Os 3 obstáculos de toda venda</h3>
+  <p><span class="pill">1. expertise técnica</span><span class="pill">2. lead flow (gerar contato)</span><span class="pill">3. autoridade/credibilidade</span></p>
 
-    <div class="fase">D · A Conversa</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Diagnosticar/educar ANTES de vender (a maioria não está pronta)</div><div class="src">curva de adoção · audit-first (Liam) / 1 gargalo (Nick)</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Escutar a dor → demo do módulo que responde → fechar</div><div class="src">roteiros no Modo Campo →</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Autoridade = prova local ("o Duda's aqui do lado usa") + documentar</div><div class="src">não review de Fiverr</div></div>
+  <h3>As 23 formas de conseguir cliente</h3>
+  <p class="lead">Regra de ouro: <b>escolha UMA e faça muito bem</b>. Ele cresceu só com YouTube. Fazer várias = morte.</p>
+  <details><summary>Ver as 23 (agrupadas)</summary>
+    <p><b>Ser descoberto:</b> Fiverr · Upwork (perfil + reviews = autoridade).<br>
+    <b>Rede:</b> indicações (peça em todo projeto) · warm outreach (puxe contatos do celular/e-mail — método "$100M Leads" do Hormozi; jeito mais fácil de fechar os primeiros).<br>
+    <b>Conteúdo:</b> YouTube (o nº1 dele) · LinkedIn (poste valor → DM quem engajar; conexão <b>sem mensagem</b> aceita 20–30% mais) · Twitter/X · Medium ("aprenda, documente, compartilhe" = autoridade).<br>
+    <b>1º cliente sem prova:</b> ONGs (de graça → testemunho) · serviço grátis / lead magnet.<br>
+    <b>Comunidades:</b> Skool/Facebook/LinkedIn — entre, <b>dê valor</b>; NÃO chegue vendendo.<br>
+    <b>Ativo:</b> cold call · cold email (Instantly; oferta = "auditoria de IA grátis", "responda SIM") · expos/eventos · <b>walk-ins</b> (lista no Google → entra na loja).<br>
+    <b>Pago:</b> Google/YouTube/LinkedIn/Meta ads → free audit/lead magnet · webinar funnel + ads (micro-compromisso US$3 → webinar → fecha).</p>
+  </details>
 
-    <div class="fase">E · Depois / Crescer</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Indicação (loja indica loja) — pedir em TODO projeto (CAC zero)</div><div class="src">Liam + Nick + Felipe</div></div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">Reusar pro próximo do nicho → caminho produto / OS do nicho</div><div class="src">Ben</div></div>
+  <div class="box aplicar"><div class="lbl">Como aplicar no seu caso</div>
+  <ul>
+    <li>O <b>audit-first</b> = seu <b>"raio-X grátis"</b> (a porta que alcança a maioria que não está pronta).</li>
+    <li>Das 23, só <b>4 cabem na loja de bairro BR</b>: <b>walk-in, warm outreach, indicação, conteúdo local</b> — via <b>WhatsApp</b>.</li>
+    <li>Você é <b>produto</b>, não agência: pegue o GTM, não a esteira de custom por cliente.</li>
+  </ul></div>
+  <div class="box hype"><div class="lbl">O que é hype (filtrar)</div>
+  <p>O modelo é <b>agência</b> = esteira de venda + churn; ele mesmo <b>vendeu o app dele</b> por reclamação; "renda passiva" é marketing. A substância é o GTM, não a promessa.</p></div>
+  <p class="src">Fontes: "3 Fases do AI Agency" e "23 formas de conseguir cliente" (lidos na íntegra) + review do programa.</p>
+</section>
 
-    <div class="fase">F · A regra-mãe</div>
-    <div class="pt ok"><span class="badge ok">aplicar</span><div class="t">A RUA é o juiz — tudo é hipótese forte até o resultado real (Duda's/Rabiska/bar)</div><div class="src">→ vira o Método v2</div></div>
-  </section>
+<section id="nick">
+  <div class="mod">Módulo 2 · Mentor</div>
+  <h2>Nick Saraev — a oferta/garantia e os sistemas que dão dinheiro</h2>
+  <p class="lead">Maker School; agência de US$25k/mês com Make.com. Pouco hype, muito sistema.</p>
 
-  <!-- ===================== CAMPO ===================== -->
-  <section id="campo" class="hide">
-    <p class="sub" style="margin:14px 0">Abra na frente do dono. Siga de cima pra baixo. Escute mais que fala.</p>
+  <h3>O que de fato vender</h3>
+  <p>"<b>Sistemas que dão dinheiro, não IA chique.</b>" Pipeline de valor: <b>lead gen → vendas → onboarding → fulfillment → follow-up</b>. ~<b>70% da receita</b> dele = só lead gen + onboarding.</p>
 
-    <div class="step"><h3><span class="n">1</span> Antes de ir</h3>
-      <p>Tenha algo <b>rodando</b> (Duda's/demo). Mande o abridor antes:</p>
-      <div class="say"><b>"Oi [nome], montei um painel pro [negócio] — vendas do dia, o que comprar e o que tá vencendo, tudo no celular. Posso te mostrar 2 min?"</b></div>
-    </div>
+  <h3>Como diagnosticar: Teoria das Restrições</h3>
+  <p>Livro <b>"The Goal" (Goldratt)</b>. Negócio = <b>pipeline com 1 gargalo</b> (quase sempre o topo/lead gen). Só destravar <b>o gargalo</b> gera dinheiro. Ache o gargalo, ataque <b>só ele</b>.</p>
 
-    <div class="step"><h3><span class="n">2</span> Entrada (15s)</h3>
-      <p>Sorria → apresente-se → ponte. <b>Nunca</b> "quer um sistema?".</p>
-      <div class="say">"Vi as avaliações do seu [negócio], parabéns. Posso trocar uma ideia rápida?"</div>
-    </div>
+  <h3>A GARANTIA (alavanca de fechamento)</h3>
+  <p>"Se eu não entregar, você não paga." <b>+300% de conversão</b>, reembolso ~10% da margem.</p>
+  <div class="box script"><div class="lbl">A matemática (ex.)</div>
+  <p>Garantia "20 agendamentos em 60 dias": (a) bate → cliente feliz + você pago; (b) parcial → não bate, mas o cliente <b>recebeu de graça</b> e ficou impressionado; (c) zero → raríssimo se tentar. <b>Quase não há downside.</b></p></div>
+  <p><b>Hack zero-a-1:</b> construa <b>pra você primeiro</b> → "já fiz sistemas parecidos" + mostra funcionando.</p>
 
-    <div class="step"><h3><span class="n">3</span> Descoberta (escuta 70%)</h3>
-      <ul class="q">
-        <li>Como você sabe hoje o que tá acabando / vencendo?</li>
-        <li>(citou a dor) → <b>repita a palavra dela</b>, devagar, com empatia.</li>
-        <li>Há quanto tempo isso acontece?</li>
-        <li>Me dá um exemplo de quando te pegou — quanto perdeu?</li>
-        <li>Como isso te impacta no fim do mês?</li>
-      </ul>
-    </div>
+  <div class="box aplicar"><div class="lbl">Como aplicar no seu caso</div>
+  <ul>
+    <li><b>Garantia no piloto:</b> <span class="say">"Roda 30 dias por minha conta; sem resultado, não paga."</span></li>
+    <li><b>Teoria das Restrições = motor do raio-X:</b> 1 gargalo (mercado: perda/validade; tattoo: no-show/DMs).</li>
+    <li><b>Não superengenheire IA:</b> valor nos sistemas chatos (vendas, lista de compras, anti-no-show).</li>
+  </ul></div>
+  <div class="box hype"><div class="lbl">Filtrar</div><p>Cold email/Upwork não cabem no bairro. Hustle ativo + ~US$200/mês de ferramentas.</p></div>
+  <p class="src">Fonte: "Primeiro cliente com 0 prova social" (lido na íntegra) + review do Maker School.</p>
+</section>
 
-    <div class="step"><h3><span class="n">4</span> Demo de 2 min</h3>
-      <p>Só agora. No <b>módulo da dor que ele citou</b>: enquadra a dor → "como você faz hoje?" → "imagina [resultado]" → mostra → crava o valor → "como isso se compara ao que você faz hoje?"</p>
-    </div>
+<section id="ben">
+  <div class="mod">Módulo 3 · Mentor</div>
+  <h2>Ben — como escolher o nicho (e por que o seu é ouro)</h2>
+  <p class="lead">Escalou agência de IA + software de SEO a US$1M ARR; analisou 100+ startups YC.</p>
 
-    <div class="step"><h3><span class="n">5</span> Oferta + garantia</h3>
-      <div class="say"><b>"Instalo a inteligência no seu [negócio], 30 dias por minha conta. Se não te mostrar [menos perda / mais agendamento], você não paga."</b></div>
-      <p>Depois: <b>setup</b> (caixa na frente) + <b>mensalidade</b>. Preço pela dor/ticket dele.</p>
-    </div>
+  <h3>A fórmula do nicho que enriquece</h3>
+  <ul>
+    <li><b>Labor-heavy</b> → ROI alto com IA.</li>
+    <li><b>Fragmentado</b> (top 50 com pouca fatia) → fácil entrar/vender.</li>
+    <li><b>Base "pequena demais pra SaaS"</b> → ignorada.</li>
+    <li><b>Tech atrasada</b> (software velho, zero IA).</li>
+  </ul>
+  <p>→ <b>Negócio de serviço local</b> = US$4 trilhões, fragmentado, software velho, quase nenhuma IA. O nicho "chato" é o ouro.</p>
 
-    <div class="step"><h3><span class="n">6</span> Objeções (respostas prontas)</h3>
-      <div class="obj"><b>"Tá caro"</b> → <i>(silêncio depois do preço; não justifique)</i> → "além do preço, tem mais algo que te impede de começar agora?"</div>
-      <div class="obj"><b>"Já tenho o Infoal"</b> → "perfeito — você não troca nada, eu ligo a inteligência em cima dele."</div>
-      <div class="obj"><b>"Não entendo de tecnologia"</b> → "é tudo no celular, dá pra falar por voz. Deixo pronto e te ensino em 10 min."</div>
-      <div class="obj"><b>Dispensa</b> → elogio + "o Duda's aqui do lado já usa" + leve humor. Sem empurrar.</div>
-    </div>
+  <h3>Não compita com os grandes</h3>
+  <p>OpenAI e SaaS grandes vão pro horizontal/mainstream/enterprise. <b>Oceano azul</b> = os nichos que ignoram. Seja a <b>camada de inteligência no hiperlocal</b>.</p>
 
-    <div class="step"><h3><span class="n">7</span> Fechar</h3>
-      <div class="say">"Quer que eu já deixe rodando no seu [negócio]?"</div>
-      <p>Dê espaço. Silêncio. Deixe ele responder.</p>
-    </div>
+  <h3>Por que IA muda a conta</h3>
+  <p>Sobe o <b>LTV</b> (suíte de nicho ~US$1.500/mês vs US$100 genérico → 10–15× o mercado) e baixa o <b>CAC</b>. Mensagem de nicho conecta muito mais.</p>
 
-    <div class="step"><h3><span class="n">8</span> Sempre, no fim</h3>
-      <p><b>Peça indicação:</b> "conhece outro dono que ia gostar disso? Se fechar, te dou um agrado."</p>
-    </div>
-  </section>
+  <h3>As 2 jogadas</h3>
+  <ol class="steps">
+    <li class="step"><b>Função específica</b> (vendas/voz/agendamento) = ROI rápido, abre a porta.</li>
+    <li class="step"><b>Vertical AI SaaS</b> = virar o "sistema operacional do nicho".</li>
+  </ol>
+  <p><b>Roteiro:</b> custom primeiro → produtiza → <b>revende a MESMA solução</b> pro nicho.</p>
 
-  <footer>Painel do Método · v1 · uso interno (não divulgar o link).<br>Detalhe e fontes: <code>comercial/METODO-V1.md</code> + dossiês. A rua reescreve.</footer>
+  <div class="box aplicar"><div class="lbl">Como aplicar no seu caso</div>
+  <ul><li>Mercado de bairro/tattoo = <b>"boring niches" de manual</b> — valida o Duda's/Rabiska.</li>
+  <li>Comece por <b>1 função/dor</b> → vire o <b>OS do nicho</b>.</li>
+  <li>Duda's = âncora → <b>reusar no #2</b>, não refazer.</li></ul></div>
+  <div class="box hype"><div class="lbl">Filtrar</div><p>O enquadramento é levantar VC. Você é bootstrap — pega a estratégia, descarta a captação.</p></div>
+  <p class="src">Fonte: "The Boring AI Niches Making Millionaires" (lido na íntegra).</p>
+</section>
+
+<section id="brasil">
+  <div class="mod">Módulo 4 · Mentores BR</div>
+  <h2>Brasil — No-Code Startup + Felipe Barcelos</h2>
+  <p class="lead">O fit Brasil: WhatsApp, preço pela dor, e o modelo de receita que segura o caixa.</p>
+
+  <h3>No-Code Startup — 7 dicas pro 1º cliente</h3>
+  <p><b>Antes:</b> foque em aprendizado (cobre simbólico R$500–1k) · <b>um nicho</b> · <b>WhatsApp-first</b> · seja minimamente profissional (Instagram/portfólio).</p>
+  <ul>
+    <li><b>Abordar o negócio com o agente DELE já montado</b> (dados fake) → vídeo/link do WhatsApp → <i>"impressiona e fecha sem reunião"</i>. ⭐</li>
+    <li>Amigos/família com negócio.</li>
+    <li>Influencer/infoprodutor (clone de teste).</li>
+    <li>Comunidades — <b>ajudando ativamente</b>.</li>
+    <li>Plataformas de vaga.</li>
+    <li><b>Preço pela DOR/ticket:</b> barbearia paga pouco; clínica paga muito. Ache entre <b>seu mínimo</b> e o <b>máximo do cliente</b>.</li>
+  </ul>
+
+  <h3>Felipe Barcelos — modelo "1-1-1" e o caixa</h3>
+  <p>Micro-SaaS puro é armadilha pra iniciante: precisa de <b>alavanca de aquisição</b>; <b>viral = "canto da sereia"</b> (imprevisível). <b>Churn ~4 meses.</b></p>
+  <p><b>Modelo 1-1-1</b> (1 produto · 1 nicho · 1 oferta) = <b>serviço produtizado</b>. Vantagem: <b>antecipa receita = CAIXA agora</b> (cliente paga de uma vez o que seria 1–3 anos de SaaS) · previsível · atende quem tem <b>mais dinheiro que tempo</b>. Porta de entrada pra achar a demanda antes do SaaS.</p>
+
+  <div class="box aplicar"><div class="lbl">Como aplicar no seu caso</div>
+  <ul><li>O abridor <b>"já montei pro seu negócio"</b> = a <b>demo do Rabiska</b> que fizemos.</li>
+  <li><b>Caixa:</b> <b>setup na frente</b> + <b>recorrência grudenta</b> (bate o churn de ~4 meses).</li>
+  <li><b>WhatsApp</b> + <b>preço pela dor</b>.</li></ul></div>
+  <p class="src">Fontes: "7 dicas pro 1º cliente" e "Why Micro-SaaS Sucks / 1-1-1" (lidos na íntegra).</p>
+</section>
+
+<section id="vendas">
+  <div class="mod">Módulo 5 · Caixa de Ferramentas</div>
+  <h2>As táticas de venda (dos maiores vendedores)</h2>
+  <p class="lead">O "como falar". Use junto com os métodos dos mentores.</p>
+
+  <h3>🎁 A oferta (Hormozi)</h3>
+  <p>Irresistível = <b>crível</b> (motivo do porquê) + <b>alto ROI</b> + <b>explicável numa frase</b>. Se não dá pra explicar numa frase, não está clara.</p>
+
+  <h3>🔎 A descoberta (Jeremy Miner / NEPQ)</h3>
+  <ul><li>Ele cita a dor → <b>repita a palavra dele</b> (empatia, devagar).</li>
+  <li>"<b>Há quanto tempo</b> isso acontece?"</li>
+  <li>"<b>Me dá um exemplo</b> de quando te pegou."</li>
+  <li>"<b>Como te impacta</b>?" — devagar (rápido = resposta rasa).</li></ul>
+
+  <h3>🖥️ A demo que fecha (FAVORITE)</h3>
+  <p class="conf"><b>F</b>rame (enquadre a dor) · <b>A</b>sk ("como faz hoje?") · <b>V</b>isualize ("imagine [resultado]") · <b>O</b>rient (situe a tela) · <b>R</b>eveal (mostre) · <b>I</b>mplant ("como resultado, você...") · <b>T</b>ell a story (caso de 10-20s) · <b>E</b>licit ("como isso se compara ao que você faz hoje?").</p>
+
+  <h3>🤝 A abordagem presencial (André Ortiz)</h3>
+  <p><b>Regra dos 15s:</b> 5s sorria · 5s apresente-se · 5s ponte. <b>Nunca</b> "posso ajudar?". <b>7% palavra / 38% tom / 55% gesto.</b> Venda o benefício ("não venda furadeira, venda o buraco").</p>
+
+  <h3>🧱 As objeções (Thiago Concer)</h3>
+  <ul><li>Nunca discuta: <span class="say">"Compreendo. Além disso, tem mais algo que te impede de fechar agora?"</span></li>
+  <li><b>Ao falar o preço, fique quieto.</b></li></ul>
+
+  <h3>🔒 O fechamento (Dan Lok — "value in advance")</h3>
+  <p>Entregue <b>valor antes</b> da venda → o "sim" vira natural. Closer ≠ empurrão.</p>
+
+  <h3>🚶 A mentalidade (Flávio Augusto — venda ativa)</h3>
+  <p>O dono <b>não vem até você — você vai até ele</b>. Antídoto do "medo de vender". Indicação = crescimento a <b>CAC zero</b>.</p>
+</section>
+
+<section id="metodo">
+  <div class="mod">Módulo 6 · Síntese</div>
+  <h2>O Método (o que sobra dos 4 + as táticas)</h2>
+  <p class="conf">🟢 vários concordam (aplicar) · 🟡 hipótese (testar na rua)</p>
+  <h4>Estratégia</h4>
+  <ul><li>🟢 Nicho estreito → "OS do nicho".</li><li>🟢 Não competir com os grandes — camada de inteligência no hiperlocal.</li><li>🟢 Produto como serviço-produtizado; custom só no âncora → reusar.</li></ul>
+  <h4>Oferta & Caixa</h4>
+  <ul><li>🟢 Vender resultado, não "IA".</li><li>🟢 De-riscar: diagnóstico grátis + garantia + "já montei pro seu negócio".</li><li>🟢 Setup na frente (caixa) + recorrência grudenta (churn ~4 meses).</li><li>🟢 Preço pela dor/ticket.</li><li>🟡 Oferta numa frase + motivo.</li></ul>
+  <h4>Aquisição</h4>
+  <ul><li>🟢 Um canal só, feito bem.</li><li>🟢 Loja de bairro: presencial · warm · indicação · conteúdo local — via WhatsApp.</li><li>🟢 Comunidade: dar valor, não vender.</li></ul>
+  <h4>A conversa & depois</h4>
+  <ul><li>🟢 Diagnosticar/educar antes de vender.</li><li>🟢 Escutar dor → demo do módulo → fechar.</li><li>🟢 Autoridade = prova local + documentar.</li><li>🟢 Indicação em todo projeto.</li><li>🟢 A RUA é o juiz → Método v2.</li></ul>
+</section>
+
+<section id="campo">
+  <div class="mod">🎯 Modo Campo</div>
+  <h2>O que abrir na frente do dono</h2>
+  <p class="lead">Siga de cima pra baixo. Escute mais que fala.</p>
+  <ol class="steps">
+    <li class="step"><b>Antes:</b> tenha algo rodando. Abridor: <span class="say">"Oi [nome], montei um painel pro [negócio] — vendas do dia, o que comprar, o que tá vencendo, tudo no celular. Posso te mostrar 2 min?"</span></li>
+    <li class="step"><b>Entrada (15s):</b> sorria → apresente-se → ponte ("vi as avaliações do seu [negócio], parabéns"). Nunca "quer um sistema?".</li>
+    <li class="step"><b>Descoberta (escuta 70%):</b> como você sabe hoje o que tá acabando/vencendo? → repita a dor dela → há quanto tempo? → me dá um exemplo, quanto perdeu? → como te impacta no fim do mês?</li>
+    <li class="step"><b>Demo 2 min (FAVORITE):</b> no módulo da dor que ele citou.</li>
+    <li class="step"><b>Oferta + garantia:</b> <span class="say">"Instalo a inteligência, 30 dias por minha conta. Se não te mostrar [resultado], não paga."</span> + setup + mensalidade (preço pela dor).</li>
+    <li class="step"><b>Objeções:</b> "tá caro" → silêncio + "além do preço, tem algo mais que te impede?" · "já tenho o Infoal" → "não troca nada, ligo a inteligência em cima" · "não entendo de tecnologia" → "é tudo no celular, por voz; deixo pronto e ensino em 10 min".</li>
+    <li class="step"><b>Fechar:</b> "quer que eu já deixe rodando?" → silêncio.</li>
+    <li class="step"><b>Sempre:</b> peça indicação ("conhece outro dono que ia gostar? Se fechar, te dou um agrado").</li>
+  </ol>
+</section>
+
+<footer>Curso do Método · v1 · uso interno (não divulgar o link).<br>Material vivo — a rua reescreve. Baseado em vídeos lidos na íntegra dos mentores + táticas dos maiores de venda.</footer>
 </div>
-<script>
-  function show(m){
-    document.getElementById('visao').classList.toggle('hide', m!=='visao');
-    document.getElementById('campo').classList.toggle('hide', m!=='campo');
-    document.getElementById('bVisao').classList.toggle('on', m==='visao');
-    document.getElementById('bCampo').classList.toggle('on', m==='campo');
-    window.scrollTo(0,0);
-  }
-</script>
 </body>
 </html>
