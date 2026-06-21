@@ -20,6 +20,10 @@
   section:first-child{border-top:none}
   .mod{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--acc);font-weight:700}
   h2{font-size:1.45rem;margin:4px 0 2px} h3{font-size:1.08rem;margin:20px 0 8px;color:#fff}
+  section h3{cursor:pointer;display:flex;align-items:center;gap:8px;user-select:none;border-bottom:1px dashed var(--line);padding-bottom:6px}
+  section h3::before{content:"▸";font-size:.85rem;color:var(--acc);transition:transform .15s;flex:none}
+  section h3.open::before{transform:rotate(90deg)}
+  .h3group{display:none} .h3group.open{display:block}
   h4{font-size:.95rem;margin:14px 0 6px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
   p{margin:8px 0;color:#d3dae3} ul{margin:8px 0 8px 4px;padding-left:18px} li{margin:5px 0;color:#d3dae3}
   .lead{color:var(--dim);font-size:.95rem;font-style:italic;margin:6px 0 10px}
@@ -381,5 +385,19 @@
 
 <footer>Curso do Método · v1 · uso interno (não divulgar o link).<br>Material vivo — a rua reescreve. Baseado em vídeos lidos na íntegra dos mentores + táticas dos maiores de venda.</footer>
 </div>
+<script>
+  // torna cada tópico (h3) clicável pra recolher/expandir — recolhido por padrão
+  document.querySelectorAll('.wrap section').forEach(function(sec){
+    Array.prototype.slice.call(sec.children).forEach(function(el){
+      if(el.tagName==='H3'){
+        var g=document.createElement('div'); g.className='h3group';
+        var n=el.nextElementSibling;
+        while(n && n.tagName!=='H3'){ var nx=n.nextElementSibling; g.appendChild(n); n=nx; }
+        el.after(g);
+        el.addEventListener('click',function(){ el.classList.toggle('open'); g.classList.toggle('open'); });
+      }
+    });
+  });
+</script>
 </body>
 </html>
