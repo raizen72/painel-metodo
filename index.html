@@ -46,6 +46,10 @@
   .src{color:var(--dim);font-size:.78rem;margin-top:6px}
   details{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;background:var(--pa)}
   summary{cursor:pointer;font-weight:600;font-size:.9rem}
+  details details{margin:8px 0 8px 10px;border-left:3px solid var(--acc);background:var(--pa2)}
+  details details summary{font-size:.85rem;color:var(--ink)}
+  .modsum{color:#d3dae3;font-size:.9rem;margin:2px 0 12px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+  .modsum b{color:#fff}
   footer{color:var(--dim);font-size:.78rem;text-align:center;margin-top:30px;line-height:1.7}
   .conf{font-size:.8rem;color:var(--dim)} .conf b{color:var(--ok)}
 </style>
@@ -390,7 +394,7 @@
 <section id="curso">
   <div class="mod">📘 O Curso (aulas a fundo)</div>
   <h2>As 10 aulas do meu curso</h2>
-  <p class="lead">Cada aula tem 7 camadas: 🎯 objetivo · 📥 <b>o que as autoridades fazem</b> · 🧠 <b>a virada</b> (meu método) · 🔧 exemplo no Duda's (com número e fala) · ✅ passo-a-passo · ⚙️ <b>o motor/a brecha</b> · ⛔ erro comum. Toca pra abrir. (v1 — a rua aprofunda → v2.)</p>
+  <p class="lead">Cada aula tem as camadas: 🎯 objetivo · 📥 <b>o que as autoridades fazem</b> · 🧠 <b>a virada</b> (meu método) · 🔧 exemplo no Duda's (com número e fala) · ✅ passo-a-passo · ⚙️ <b>o motor/a brecha</b> · ⛔ erro. Os módulos mais técnicos (<b>M1, M2, M3, M5, M6, M7</b>) abrem em <b>sub-aulas</b> — toca no módulo, depois na sub-aula. (v1 — a rua aprofunda → v2.)</p>
 
   <div class="box aplicar"><div class="lbl">🔥 Os 6 Motores — o que MAIS fecha (ataque nesta ordem)</div>
   <p>As alavancas com maior efeito medido sobre a venda. Se for cortar algo, corte qualquer coisa antes destes 6.</p>
@@ -421,33 +425,87 @@
   </details>
 
   <details><summary>M1 · Nicho + a UMA dor que vaza dinheiro <span class="tag t-mot">motor: o número</span></summary>
-    <p><b>🎯 Objetivo:</b> escolher 1 nicho local e cravar o <b>único gargalo que mais vaza R$</b> — porque é nele que você vai ancorar preço, demo e garantia.</p>
-    <p><b>📥 As autoridades:</b> Ben — a <b>fórmula do nicho que enriquece</b>: <i>labor-heavy</i> (uso intenso de mão de obra) + fragmentado + base "pequena demais pra SaaS" + tech atrasada → serviço local é o ouro ✓. Nick — <b>Teoria das Restrições</b> ("A Meta"/Goldratt): todo negócio é uma esteira com <b>1 gargalo</b>; ataque <b>só ele</b>. Liam — o <i>self-audit</i> da "vantagem injusta" (acesso a um negócio &gt; experiência+conexões &gt; interesse) + o filtro: tem dinheiro · fácil de alcançar · vulnerável OU otimizável por IA.</p>
-    <p><b>🧠 A virada:</b> eles param em "escolha o nicho". Eu vou <b>um passo além</b>: dentro do nicho, ache a UMA dor que dá pra <b>medir em R$</b>. <b>Sem número, não há venda</b> — o número é o que faz a garantia e o preço fazerem sentido depois.</p>
-    <p><b>🔧 No Duda's:</b> nicho = mercado/mercearia de bairro (labor-heavy, fragmentado, software velho = o "boring niche" do Ben). Gargalo = <b>perda por validade/ruptura</b>. A dor em número: <span class="say">"joga fora uns R$800–1.000/mês"</span> — esse número vira a <b>régua de tudo</b>. (Tattoo = no-show + DMs paradas; mesma mecânica.)</p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Escolher o nicho onde você tem <b>acesso/conexão</b> (Liam: o melhor de todos).</li><li>Mapear o fluxo (compra → estoque → venda → fim de mês).</li><li>Achar o gargalo (onde mais vaza dinheiro).</li><li>Cravar a UMA dor <b>E o número dela em R$</b> ("quanto isso some por mês?").</li></ol>
-    <p><b>⚙️ Motor &amp; brecha:</b> 🔥 achar <b>o número da perda</b> é o que liga o motor do <b>preço ancorado</b> (M2/M4). 🎯 brecha: o hiperlocal labor-heavy que o SaaS grande ignora (Ben).</p>
-    <p><b>⛔ Erro comum:</b> atacar vários nichos/dores ao mesmo tempo · cravar a dor <b>sem o número</b> (aí tudo vira "tá caro").</p>
+    <p class="modsum"><b>🎯 O módulo:</b> escolher 1 nicho local e cravar o <b>único gargalo que mais vaza R$</b> — porque é nele que você ancora preço, demo e garantia. <b>Sem número, não há venda.</b> 3 aulas: escolher o nicho → achar o gargalo → pôr R$ na dor.</p>
+
+    <details><summary>Aula 1.1 · Escolher o nicho (a "vantagem injusta")</summary>
+      <p><b>📥 Autoridade:</b> Liam — <i>self-audit</i> em 4 camadas, NESSA ordem: <b>1)</b> acesso a um negócio (testar de graça, baixa pressão) &gt; <b>2)</b> experiência + conexões &gt; <b>3)</b> uma das duas &gt; <b>4)</b> interesse (sozinho é o último recurso; somado vira "combustível de foguete"). Ben — o nicho que enriquece: <i>labor-heavy</i> + fragmentado + "pequeno demais pra SaaS" + tech atrasada.</p>
+      <p><b>🧠 A virada:</b> não escolha por paixão nem pelo "maior mercado" — escolha por <b>acesso</b> (onde você erra de graça) cruzado com o filtro do Ben.</p>
+      <p><b>🔧 No Duda's:</b> mercado de bairro pontua alto em tudo — você tem <b>acesso</b> (o âncora), é labor-heavy, fragmentado (mil mercadinhos), software velho. "Boring niche" de manual.</p>
+      <p><b>✅ Passo (pontue 0–2 cada):</b></p><ol><li>Tenho acesso a um negócio do nicho?</li><li>Tem dinheiro pra gastar? é fácil de alcançar?</li><li>É vulnerável OU otimizável por IA?</li><li>Some — maior nota ganha.</li></ol>
+      <p><b>⛔ Erro:</b> escolher só por interesse, ou um nicho sem dinheiro/sem acesso.</p>
+    </details>
+
+    <details><summary>Aula 1.2 · Achar o gargalo (Teoria das Restrições)</summary>
+      <p><b>📥 Autoridade:</b> Nick — "A Meta"/Goldratt: todo negócio é uma <b>esteira com 1 gargalo</b>; só destravar o gargalo gera dinheiro. Ataque <b>só ele</b>.</p>
+      <p><b>🧠 A virada:</b> resista a "resolver o negócio inteiro". 1 gargalo → 1 demo → 1 oferta.</p>
+      <p><b>🔧 No Duda's:</b> mapeando <b>compra → estoque → venda → fim de mês</b>, o gargalo é <b>perda por validade/ruptura</b> (dinheiro indo pro lixo). (Tattoo: no-show + DMs paradas.)</p>
+      <p><b>✅ Passo:</b></p><ol><li>Desenhe o fluxo em 4–5 caixas.</li><li>Em cada caixa: "onde vaza dinheiro/tempo aqui?".</li><li>Marque a que mais sangra = o gargalo.</li></ol>
+      <p><b>⛔ Erro:</b> achar 3 gargalos e atacar todos (dilui a venda).</p>
+    </details>
+
+    <details><summary>Aula 1.3 · Pôr R$ na dor (a régua de tudo) <span class="tag t-mot">🔥 motor</span></summary>
+      <p><b>🧠 A virada (meu método):</b> aqui eu vou além dos mentores. A dor só vira venda com <b>número</b>: ele ancora preço, garantia e urgência.</p>
+      <p><b>🔧 Como extrair o número:</b> pergunte e <b>fique quieto</b>: <span class="say">"Quanto você joga fora por mês, no seu chute?"</span> Se ele não souber, <b>estime na frente dele</b>: varejo de alimentos perde tipicamente <b>2–5% do faturamento</b> em quebra/validade → "se você fatura R$X, são uns R$Y/mês".</p>
+      <p><b>✅ Passo:</b></p><ol><li>Pergunte a perda/mês.</li><li>Não sabe? estime por % do faturamento, junto com ele.</li><li><b>Anote o R$</b> — é a régua do M2 e do M4.</li></ol>
+      <p><b>⛔ Erro:</b> cravar a dor sem número (aí tudo vira "tá caro" e você fica sem régua).</p>
+    </details>
   </details>
 
   <details><summary>M2 · A oferta que de-risca <span class="tag t-mot">🔥 2 motores</span></summary>
-    <p><b>🎯 Objetivo:</b> uma oferta que o dono <b>não consegue recusar porque o risco é todo seu</b>.</p>
-    <p><b>📥 As autoridades:</b> Nick — a <b>GARANTIA</b>: "se eu não entregar, você não paga" = <b>+300% de conversão</b>, custo de reembolso ~10% da margem (quase nenhum <i>downside</i>). Hormozi — oferta irresistível = <b>crível</b> (motivo do porquê) + <b>alto ROI</b> + <b>explicável numa frase</b>. Liam — o <b>diagnóstico/audit grátis É a venda</b> (alcança a maioria que "não está pronta"). No-Code — <b>preço pela dor</b> (barbearia paga pouco, clínica paga muito).</p>
-    <p><b>🧠 A virada:</b> eles usam a garantia em contratos de US$ alto. No bairro ela faz <b>dupla função</b>: é a muleta anti-medo (sua e dele) <b>e</b> a chave que <b>dispensa a autoridade</b> que você ainda não tem — sem prova social, a garantia ocupa o lugar dela. E o "motivo do porquê" aqui é verdadeiro: "quero seu mercado como caso da região".</p>
-    <p><b>🔧 No Duda's (a oferta em 1 frase):</b> <span class="say">"Instalo a inteligência e rodo 30 dias por minha conta; se eu não te mostrar onde tá vazando dinheiro, você não paga. Depois é R$[setup] uma vez + R$[mensalidade]/mês — uma fração dos R$1.000 que você perde."</span> Estrutura BR (testar): 30 dias grátis → setup <b>R$300–800</b> → mensalidade <b>R$197–497</b>. Regra: a mensalidade ≈ <b>1/3 da perda</b> que ele te deu no M1 (perde R$1.000 → R$297 é óbvio).</p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Oferta em <b>1 frase</b> (se não cabe numa frase, não está clara — Hormozi).</li><li>Garantia = <b>resultado mensurável + prazo</b> ("mostrar a perda em 30 dias").</li><li>O <b>motivo do porquê</b> ("quero como caso da região").</li><li>Preço como <b>fração explícita</b> da perda do M1.</li></ol>
-    <p><b>⚙️ Motor:</b> 🔥 garantia (a maior alavanca de fechamento medida) + 🔥 diagnóstico grátis (o cavalo de troia que abre a maioria). <span class="src">⚠️ A <b>forma</b> da garantia que não te expõe demais ainda é hipótese — testar na rua.</span></p>
-    <p><b>⛔ Erro comum:</b> vender features · preço sem ancorar na perda · oferta <b>sem garantia</b> (volta a depender da autoridade que você ainda não tem).</p>
+    <p class="modsum"><b>🎯 O módulo:</b> uma oferta que o dono <b>não recusa porque o risco é todo seu</b>. 3 aulas: a garantia → o preço pela dor → a oferta em 1 frase. Aqui moram <b>2 dos 6 motores</b>.</p>
+
+    <details><summary>Aula 2.1 · A garantia "sem resultado, não paga" <span class="tag t-mot">🔥 motor nº1</span></summary>
+      <p><b>📥 Autoridade:</b> Nick — a garantia dá <b>+300% de conversão</b> e o reembolso custa só ~10% da margem. A matemática: (a) bate → cliente feliz + você pago; (b) parcial → ele recebeu de graça e ficou impressionado; (c) zero → raríssimo. <b>Quase não há downside.</b></p>
+      <p><b>🧠 A virada (não se exponha):</b> garanta o que <b>você controla</b>. Não prometa "vou te fazer lucrar R$X" (depende dele) — prometa <b>"em 30 dias eu te MOSTRO onde tá vazando dinheiro, ou você não paga"</b>. Mostrar a perda você entrega sempre; lucro, não.</p>
+      <p><b>🔧 No Duda's (a fala):</b> <span class="say">"Rodo 30 dias por minha conta. Se nesse mês eu não te mostrar onde tá vazando dinheiro, você não me paga nada."</span></p>
+      <p><b>✅ Passo:</b></p><ol><li>Escolha um resultado que <b>você</b> entrega (mostrar a perda/oportunidade).</li><li>Prazo curto e claro (30 dias).</li><li>Escreva a consequência ("não paga").</li></ol>
+      <p><b>⛔ Erro:</b> garantir resultado financeiro que depende do dono → você se expõe e não cumpre.</p>
+    </details>
+
+    <details><summary>Aula 2.2 · Preço pela dor — como calcular</summary>
+      <p><b>📥 Autoridade:</b> No-Code — preço pela DOR/ticket (barbearia paga pouco, clínica paga muito); fique entre o <b>seu mínimo</b> e o <b>máximo do cliente</b>.</p>
+      <p><b>🧠 A virada (a régua de 1/3):</b> a mensalidade tem que ser <b>fração óbvia</b> da perda do M1. Regra prática: <b>~1/3 da perda mensal</b>. Perde R$1.000 → R$297 é evidente ("pago R$297 pra parar de perder R$1.000").</p>
+      <p><b>🔧 Faixas BR (testar):</b> setup <b>R$300–800</b> (uma vez) + mensalidade <b>R$197–497</b>. Âncoras de fala: <span class="say">"menos de R$10 por dia"</span> · <span class="say">"menos do que você perde numa semana de validade"</span> · <span class="say">"mais barato que meio salário de um funcionário — e não falta nem tira férias"</span>.</p>
+      <p><b>✅ Passo:</b></p><ol><li>Pegue a perda/mês do M1.</li><li>Mensalidade ≈ 1/3 dela (dentro da faixa).</li><li>Escolha 1 âncora de fala.</li></ol>
+      <p><b>⛔ Erro:</b> preço "de tabela" sem olhar a dor de cada loja.</p>
+    </details>
+
+    <details><summary>Aula 2.3 · A oferta em 1 frase + o "motivo do porquê"</summary>
+      <p><b>📥 Autoridade:</b> Hormozi — irresistível = <b>crível</b> + <b>alto ROI</b> + <b>explicável numa frase</b> (se não cabe numa frase, não está clara) + um <b>motivo do porquê</b> da condição boa.</p>
+      <p><b>🧠 A virada:</b> no bairro o "motivo do porquê" é verdadeiro e desarma a desconfiança: <b>"quero seu mercado como meu caso aqui da região"</b>.</p>
+      <p><b>🔧 A oferta completa, em 1 frase:</b> <span class="say">"Instalo a inteligência e rodo 30 dias por minha conta; se não te mostrar onde tá vazando dinheiro, você não paga. Depois é R$[setup] + R$[mensalidade]/mês — uma fração dos R$1.000 que você perde. Quero seu mercado como caso da região."</span></p>
+      <p><b>✅ Passo:</b></p><ol><li>Monte: [o que faço] + [garantia] + [preço como fração] + [motivo].</li><li>Diga em voz alta — coube numa frase?</li></ol>
+      <p><b>⛔ Erro:</b> oferta cheia de features que não cabe numa frase.</p>
+      <p class="src">⚠️ A <b>forma</b> da garantia que não te expõe demais ainda é hipótese — testar na rua.</p>
+    </details>
   </details>
 
   <details><summary>M3 · A demo que fecha <span class="tag t-mot">🔥 motor: "já montei"</span></summary>
-    <p><b>🎯 Objetivo:</b> usar a demo como <b>prova viva que vende quase sozinha</b> — mostrar &gt; explicar.</p>
-    <p><b>📥 As autoridades:</b> No-Code — "<b>abordar o negócio com o agente DELE já montado</b> (com dados de exemplo) → impressiona e <b>fecha sem reunião</b>" ⭐. Liam — depois do "sim", manda a demo (vídeo de tela tipo Loom) + link de agendamento. A Caixa de Ferramentas — o framework <b>FAVORITE</b> (Frame → Ask → Visualize → Orient → Reveal → Implant → Tell a story → Elicit).</p>
-    <p><b>🧠 A virada:</b> eles mandam um <b>Loom genérico</b>. Eu chego com o painel <b>já com o nome e a cara do mercado dele</b>, aberto na tela da dor que ele <b>acabou de citar</b>. A personalização é o que transforma "uma demonstração" em "<b>isso é o MEU mercado</b>".</p>
-    <p><b>🔧 No Duda's:</b> antes da visita, painel-demo aberto no celular com dados de exemplo. Na hora, ele citou validade → abra <b>direto</b> a tela "o que tá vencendo" e aplique FAVORITE: <span class="say">"Olha como apareceria o que você acabou de me falar [Reveal]… esse card te avisaria 5 dias antes de vencer [Implant]… como isso se compara ao olho de hoje? [Elicit]"</span></p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Monte a demo <b>personalizada</b> (nome do mercado) <b>antes</b>.</li><li>Abra <b>na tela da dor citada</b>, não no menu.</li><li>Uma tela, FAVORITE, <b>2 minutos</b> — não passeie por features.</li><li>Feche com a pergunta de comparação ("como isso se compara ao que você faz hoje?").</li></ol>
-    <p><b>⚙️ Motor &amp; brecha:</b> 🔥 a demo personalizada é o que "fecha sem reunião" — encurta o ciclo todo. 🎯 nenhum mentor chega com o painel do <b>próprio cliente</b> pronto na mão.</p>
-    <p><b>⛔ Erro comum:</b> clicar features sem enquadrar a dor · demo longa · demo <b>genérica</b> (sem o nome dele).</p>
+    <p class="modsum"><b>🎯 O módulo:</b> a demo personalizada como <b>prova viva</b> — mostrar &gt; explicar. 2 aulas: montar a demo "já montei pro seu negócio" → conduzir com o FAVORITE.</p>
+
+    <details><summary>Aula 3.1 · A demo "já montei pro SEU mercado" <span class="tag t-mot">🔥 motor</span></summary>
+      <p><b>📥 Autoridade:</b> No-Code — chegar com o <b>agente DELE já montado</b> (com dados de exemplo) "impressiona e <b>fecha sem reunião</b>" ⭐. Liam — depois do "sim", manda a demo gravada (tipo Loom) + link.</p>
+      <p><b>🧠 A virada:</b> eles mandam um vídeo genérico. Eu chego com o painel <b>com o nome e a cara do mercado dele</b>, aberto <b>na tela da dor que ele acabou de citar</b>. Vira "isso é o MEU mercado", não "uma demonstração".</p>
+      <p><b>🔧 No Duda's:</b> antes da visita, painel-demo aberto no celular com dados plausíveis. Roteie por dor: validade → tela "o que tá vencendo"; o que comprar → "o que comprar hoje"; lucro → "vendas e lucro do dia".</p>
+      <p><b>✅ Passo:</b></p><ol><li>Prepare a demo com nome/dados antes de sair.</li><li>Abra na tela da dor citada, não no menu.</li><li>Uma tela só, 2 minutos.</li></ol>
+      <p><b>⛔ Erro:</b> demo genérica (sem o nome dele) ou passear por features.</p>
+    </details>
+
+    <details><summary>Aula 3.2 · Conduzir com o FAVORITE (8 passos)</summary>
+      <p><b>📥 Autoridade:</b> a Caixa de Ferramentas — <b>FAVORITE</b>: enquadrar → perguntar → fazer visualizar → orientar a tela → revelar → cravar valor → contar um caso → eliciar resposta.</p>
+      <p><b>🔧 Aplicado ao painel (a fala em cada passo):</b></p>
+      <ul>
+        <li><b>F</b>rame: <span class="say">"você falou que perde por validade…"</span></li>
+        <li><b>A</b>sk: <span class="say">"como você controla isso hoje?"</span></li>
+        <li><b>V</b>isualize: <span class="say">"imagina saber 5 dias antes o que vai vencer…"</span></li>
+        <li><b>O</b>rient: <span class="say">"então olha essa tela aqui…"</span></li>
+        <li><b>R</b>eveal: <span class="say">"esse é o seu mercado, esses são os produtos perto de vencer"</span></li>
+        <li><b>I</b>mplant: <span class="say">"como resultado, você repõe ou promove ANTES de perder"</span></li>
+        <li><b>T</b>ell a story: <span class="say">"o Duda's aqui do lado já usa isso"</span> <i>(use seu caso real com número quando tiver — não invente)</i></li>
+        <li><b>E</b>licit: <span class="say">"como isso se compara ao que você faz hoje?"</span></li>
+      </ul>
+      <p><b>⛔ Erro:</b> revelar a tela (R) <b>sem antes enquadrar a dor</b> (F) — aí vira feature, não solução.</p>
+    </details>
   </details>
 
   <details><summary>M4 · A conversa (o coração) <span class="tag t-bre">🎯 a maior brecha</span></summary>
@@ -462,33 +520,70 @@
   </details>
 
   <details><summary>M5 · Aquisição BR (um canal só) <span class="tag t-bre">🎯 brecha BR</span></summary>
-    <p><b>🎯 Objetivo:</b> encher o funil com <b>UM canal feito bem</b>, dos que cabem no bairro.</p>
-    <p><b>📥 As autoridades:</b> Liam — <b>escolha 1 canal e faça muito bem</b> (ele cresceu só com YouTube) ✓✓✓; e o cardápio de 23 canais. Nick — <i>lead gen</i> é ~<b>70% da receita</b> (mas via cold email/Upwork, que não cabem no bairro). No-Code — <b>WhatsApp-first</b>; comunidades entrando com valor, não vendendo.</p>
-    <p><b>🧠 A virada:</b> <b>poda.</b> Dos 23 canais do Liam, só <b>4</b> servem ao bairro BR: <b>presencial/walk-in · warm</b> (sua rede) <b>· indicação · conteúdo local</b> — tudo via WhatsApp. Cold email/Upwork são o viés americano que <b>NÃO cabe</b> (dono de mercado não responde e-mail frio).</p>
-    <p><b>🔧 No Duda's:</b> lista de 20–50 mercados no Google Maps → comece pelos que você <b>já conhece</b> (warm = os que mais fecham) → walk-in + WhatsApp com o abridor <span class="say">"já montei pro seu mercado"</span> → cadência de 3 toques (presencial → WhatsApp D+2 → último toque D+5).</p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Escolha <b>1 canal</b> (comece por presencial + warm).</li><li>Monte a lista (Maps/garimpo).</li><li>Cadência de <b>3 toques</b> no mesmo lead.</li><li>Peça <b>indicação</b> em todo fechamento (vira seu 5º canal, de graça).</li></ol>
-    <p><b>⚙️ Motor &amp; brecha:</b> 🔥 warm + indicação convertem muito mais (comece por quem te conhece). 🎯 presencial/WhatsApp no hiperlocal — onde nenhum mentor americano joga.</p>
-    <p><b>⛔ Erro comum:</b> espalhar em vários canais · cold email pro dono de mercado.</p>
+    <p class="modsum"><b>🎯 O módulo:</b> encher o funil com <b>UM canal feito bem</b>, dos 4 que cabem no bairro. 2 aulas: escolher o canal + montar a lista → a cadência de toques.</p>
+
+    <details><summary>Aula 5.1 · Escolher 1 canal + montar a lista</summary>
+      <p><b>📥 Autoridade:</b> Liam — <b>1 canal, feito bem</b> (ele cresceu só com YouTube) ✓✓✓. No-Code — WhatsApp-first. Nick — lead gen é ~70% da receita (mas cold email/Upwork, que não cabem aqui).</p>
+      <p><b>🧠 A virada (poda):</b> dos 23 canais do Liam, só <b>4</b> cabem no bairro BR: <b>presencial/walk-in · warm (sua rede) · indicação · conteúdo local</b> — tudo via WhatsApp. Cold email/Upwork ficam de fora (dono de mercado não responde e-mail frio).</p>
+      <p><b>🔧 No Duda's:</b> Google Maps → "mercado/mercearia/hortifrúti perto de Maricá" → lista de <b>20–50</b> (nome · endereço · WhatsApp). Comece pelos que você <b>já conhece</b> (warm = os que mais fecham).</p>
+      <p><b>✅ Passo:</b></p><ol><li>Escolha 1 canal (comece por presencial + warm).</li><li>Monte a lista no Maps.</li><li>Ordene: warm/indicados primeiro.</li></ol>
+      <p><b>⛔ Erro:</b> espalhar em 4 canais ao mesmo tempo · cold email pro dono de mercado.</p>
+    </details>
+
+    <details><summary>Aula 5.2 · A cadência de 3 toques</summary>
+      <p><b>📥 Autoridade:</b> Liam — multicanal no MESMO lead bom (e-mail → ligação → DM) + pesquisar o prospect antes ("vi seu Insta, notei isto").</p>
+      <p><b>🧠 A virada (BR):</b> a cadência vira <b>presencial → WhatsApp D+2 → último toque D+5</b>, tudo via WhatsApp. Poucos leads bons, vários toques — não 1 toque em muitos.</p>
+      <p><b>🔧 No Duda's (os toques):</b> dia 0 walk-in; <b>D+2</b> <span class="say">"passei aí, deixei separado o exemplo do seu mercado — posso ativar o teste grátis?"</span>; <b>D+5</b> <span class="say">"não quero te encher 🙂 faz sentido pra agora ou volto mais pra frente?"</span></p>
+      <p><b>✅ Passo:</b></p><ol><li>Pesquise o mercado antes (Google/Insta).</li><li>3 toques no mesmo lead (0 · +2 · +5).</li><li>Peça indicação ao fechar (o 5º canal, grátis — ver M8).</li></ol>
+      <p><b>⛔ Erro:</b> desistir no 1º "não atendeu" · usar só 1 canal de toque.</p>
+    </details>
   </details>
 
   <details><summary>M6 · O caixa (setup + recorrência vs churn) <span class="tag t-bre">🎯 brecha: o que eles ignoram</span></summary>
-    <p><b>🎯 Objetivo:</b> montar receita que <b>sobrevive</b> — caixa agora + recorrência que segura.</p>
-    <p><b>📥 As autoridades:</b> aqui é BRECHA — <b>Liam/Nick/Ben quase não falam de caixa/churn</b>. Quem cobre é <b>Felipe Barcelos</b>: micro-SaaS puro é armadilha (<b>churn ~4 meses</b>; "viral = canto da sereia"); o <b>modelo 1-1-1</b> (1 produto · 1 nicho · 1 oferta) = serviço produtizado que <b>antecipa caixa</b> (o cliente paga de uma vez o que seria 1–3 anos de SaaS).</p>
-    <p><b>🧠 A virada:</b> pego o <b>setup-upfront</b> do Felipe e somo o <b>stickiness</b> que ele não detalha: o que segura é a <b>operação diária</b> — o dono abre o painel todo dia, e você mostra o resultado todo mês. <b>Churn vem do esquecimento do valor</b> → torne o valor visível.</p>
-    <p><b>🔧 No Duda's:</b> setup <b>R$300–800</b> (antecipa seu caixa, via Pix) + <b>R$197–497/mês</b> com 30 dias de garantia. Gruda via cockpit diário + a operação do Infoal que você roda por ele. Todo mês, a mensagem que mata o churn: <span class="say">"esse mês a inteligência te avisou de R$X em produto perto de vencer."</span></p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Definir o <b>setup</b> (caixa na frente, via Pix).</li><li>Definir a recorrência + <b>o que a torna grudenta</b> (operação diária).</li><li>Preço pela dor (fração da perda).</li><li>Acompanhar o churn (se cair, o valor sumiu da vista).</li></ol>
-    <p><b>⚙️ Motor &amp; brecha:</b> 🔥 setup-upfront = caixa imediato. 🎯 pensar em caixa/churn (que os mentores ignoram) é vantagem de <b>sobrevivência</b>. <span class="src">⚠️ o valor do setup e quantos meses a recorrência segura ainda são hipótese — medir.</span></p>
-    <p><b>⛔ Erro comum:</b> só recorrência sem caixa (você quebra antes de escalar) · preço fixo sem olhar a dor · deixar o valor invisível (= churn).</p>
+    <p class="modsum"><b>🎯 O módulo:</b> receita que <b>sobrevive</b> — caixa agora + recorrência que segura. Os mentores ignoram isso; é brecha. 3 aulas: setup upfront → recorrência grudenta → preço/cobrança BR.</p>
+
+    <details><summary>Aula 6.1 · Setup upfront (o caixa agora)</summary>
+      <p><b>📥 Autoridade:</b> Felipe — serviço produtizado <b>antecipa caixa</b> (o cliente paga de uma vez o que seria 1–3 anos de SaaS); micro-SaaS puro é armadilha (sobrevive de caixa).</p>
+      <p><b>🧠 A virada:</b> cobre sempre um <b>setup na frente</b> (mesmo que simbólico) — antecipa seu caixa <b>e compromete</b> o cliente (quem pagou, usa).</p>
+      <p><b>🔧 No Duda's:</b> setup <b>R$300–800</b> via <b>Pix na hora</b> (fecha mais rápido que boleto), após os 30 dias de garantia.</p>
+      <p><b>✅ Passo:</b></p><ol><li>Defina o setup (faixa R$300–800).</li><li>Cobre por Pix no aceite.</li></ol>
+      <p><b>⛔ Erro:</b> só recorrência, sem caixa na frente → você quebra antes de escalar.</p>
+    </details>
+
+    <details><summary>Aula 6.2 · Recorrência grudenta (vs churn ~4 meses) <span class="tag t-bre">🎯</span></summary>
+      <p><b>📥 Autoridade:</b> Felipe — <b>churn ~4 meses</b> é o inimigo; precisa de stickiness.</p>
+      <p><b>🧠 A virada:</b> o que gruda não é feature — é <b>operação diária + valor visível</b>. O dono cancela quando <b>esquece o valor</b>. Então mostre o valor todo mês.</p>
+      <p><b>🔧 No Duda's:</b> gruda via cockpit diário (ele abre todo dia) + a operação do Infoal que você roda por ele. Mensagem mensal anti-churn: <span class="say">"esse mês a inteligência te avisou de R$X em produto perto de vencer."</span></p>
+      <p><b>✅ Passo:</b></p><ol><li>Crie 1 motivo pra ele abrir o painel todo dia.</li><li>Mande o resumo do valor 1×/mês.</li><li>Se o uso cair, ligue <b>antes</b> do cancelamento.</li></ol>
+      <p><b>⛔ Erro:</b> deixar o valor invisível → ele esquece → cancela.</p>
+    </details>
+
+    <details><summary>Aula 6.3 · Preço pela dor + cobrança simples</summary>
+      <p><b>🧠 A virada:</b> mensalidade = fração da perda (ver Aula 2.2); cobrança e contrato <b>simples = menos medo = fecha mais</b>.</p>
+      <p><b>🔧 No Duda's:</b> R$197–497/mês por Pix recorrente/link (Mercado Pago, Asaas, InfinitePay). Contrato de <b>1 página</b>: o que entrega · valor · garantia · os dados são do lojista · cancela fácil.</p>
+      <p><b>✅ Passo:</b></p><ol><li>Mensalidade ≈ 1/3 da perda.</li><li>Pix recorrente + contrato de 1 página.</li></ol>
+      <p><b>⛔ Erro:</b> contrato longo/jurídico que assusta · preço sem olhar a dor.</p>
+      <p class="src">Detalhe de Pix/contrato/LGPD na aba <b>🇧🇷 Realidade BR</b>. ⚠️ valor do setup e meses de recorrência ainda são hipótese — medir.</p>
+    </details>
   </details>
 
   <details><summary>M7 · Entrega sem dor (não-invasiva) <span class="tag t-bre">🎯 brecha + 🔥 valor no mesmo dia</span></summary>
-    <p><b>🎯 Objetivo:</b> implantar <b>rápido e sem risco</b>, ganhando confiança no 1º dia.</p>
-    <p><b>📥 As autoridades:</b> Liam — os <i>quick wins</i> são <b>simples de propósito</b> (provam valor rápido); comece simples. YC/startups — "<b>sem API no piloto</b>" (não dependa de integração pesada). No-Code — entrega leve, via WhatsApp.</p>
-    <p><b>🧠 A virada:</b> no bairro, a entrega é uma jogada de <b>CONFIANÇA, não técnica</b>. O lojista tem <b>medo de mexer no sistema dele</b> → você não troca nada, só <b>LÊ os dados que já existem</b> (o XML da NFC-e/SAT que toda venda gera). E entrega <b>valor no mesmo dia</b> (<i>time-to-first-value</i>): plugou → vendas reais no painel hoje. Isso <b>mata o "não entendo de tecnologia"</b>.</p>
-    <p><b>🔧 No Duda's:</b> plugar o leitor de NFC-e → as vendas reais aparecem no painel <b>no mesmo dia</b>, sem tocar no Infoal. A fala que vende confiança: <span class="say">"Se eu sumir amanhã, seu mercado continua igual."</span></p>
-    <p><b>✅ Passo-a-passo:</b></p><ol><li>Achar os dados que <b>já existem</b> (XML/NFC-e).</li><li>Plugar <b>sem mexer</b> no sistema dele.</li><li>Mostrar valor <b>no 1º dia</b>.</li><li>Agendar a reunião de pós-piloto (onde a garantia vira venda).</li></ol>
-    <p><b>⚙️ Motor &amp; brecha:</b> 🔥 valor no mesmo dia = confiança imediata + cumpre a garantia. 🎯 o não-invasivo (lê NFC-e, não toca no ERP) é a chave da confiança no varejo BR que <b>nenhum mentor cobre</b>.</p>
-    <p><b>⛔ Erro comum:</b> integração pesada · demorar pra mostrar valor (perde a janela de confiança) · tentar trocar o sistema dele.</p>
+    <p class="modsum"><b>🎯 O módulo:</b> implantar <b>rápido e sem risco</b>, ganhando confiança no 1º dia. 2 aulas: a integração não-invasiva → o valor no mesmo dia.</p>
+
+    <details><summary>Aula 7.1 · Não-invasivo (lê a NFC-e, não toca no ERP) <span class="tag t-bre">🎯</span></summary>
+      <p><b>📥 Autoridade:</b> YC/startups — "<b>sem API no piloto</b>" (não dependa de integração pesada). Liam — quick wins simples de propósito.</p>
+      <p><b>🧠 A virada:</b> a entrega no bairro é jogada de <b>confiança, não técnica</b>. O lojista tem <b>medo de mexer no sistema dele</b> → você <b>não troca nada</b>, só <b>LÊ os dados que já existem</b> (o XML da NFC-e/SAT que toda venda gera).</p>
+      <p><b>🔧 No Duda's (a fala):</b> <span class="say">"Não preciso mexer no seu sistema. Só leio as notas que você já emite e mostro no celular. Se eu sumir amanhã, seu mercado continua igual."</span></p>
+      <p><b>✅ Passo:</b></p><ol><li>Ache os dados que já existem (XML/NFC-e/SAT).</li><li>Leia sem tocar no PDV/ERP dele.</li></ol>
+      <p><b>⛔ Erro:</b> propor trocar o sistema dele · integração pesada que trava o piloto.</p>
+    </details>
+
+    <details><summary>Aula 7.2 · Valor no mesmo dia (time-to-first-value) <span class="tag t-mot">🔥 motor</span></summary>
+      <p><b>🧠 A virada:</b> a confiança nasce da <b>velocidade</b>: plugou → <b>dado real no painel no mesmo dia</b>. É isso que mata o "não entendo de tecnologia" e cumpre a garantia do M2.</p>
+      <p><b>🔧 No Duda's:</b> plugar o leitor de NFC-e de manhã → as vendas reais aparecem no painel à tarde. Mostre no mesmo dia e <b>agende a reunião de pós-piloto</b> (onde a garantia vira venda).</p>
+      <p><b>✅ Passo:</b></p><ol><li>Mostre 1 número real no 1º dia.</li><li>Agende o pós-piloto (30 dias) já na instalação.</li></ol>
+      <p><b>⛔ Erro:</b> demorar dias pra mostrar valor → perde a janela de confiança.</p>
+    </details>
   </details>
 
   <details><summary>M8 · Reusar → virar o OS do nicho <span class="tag t-mot">🔥 motor: indicação + escala</span></summary>
